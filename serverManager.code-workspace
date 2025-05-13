@@ -67,7 +67,8 @@
 			"text_encoding": "cpp",
 			"typeinfo": "cpp",
 			"valarray": "cpp",
-			"variant": "cpp"
+			"variant": "cpp",
+			"filesystem": "cpp"
 		}
 	}
 }
