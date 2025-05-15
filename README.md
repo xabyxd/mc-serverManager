@@ -20,21 +20,22 @@ This is a **Minecraft server manager** written in C++, designed to easily contro
 ## 📁 Project Structure
 
 ```
-minecraft-server-manager/
+mc-serverManager/
 │
 ├── servers/
-│   ├── vanilla/
+│   ├── vanillaWithFriends/
 │   │   ├── server.jar
 │   │   ├── config.json
 │   │   └── other server files
-│   └── forge/
-│       ├── forge.jar
+│   └── AllTheMods9/
+│       ├── forge_server.jar
 │       └── config.json
+│       └── other server files
 │
 ├── logs/
-│   └── vanilla.log, forge.log, ...
+│   └── vanillaWithFriends.log, AllTheMods9.log, ...
 ├── pids/
-│   └── vanilla.pid, forge.pid, ...
+│   └── vanillaWithFriends.pid, AllTheMods9.pid, ...
 ├── main.cpp
 └── README.md
 ```
@@ -46,9 +47,9 @@ minecraft-server-manager/
 ### 📌 Requirements
 
 - Windows
-- C++17 compatible compiler (MSVC / g++)
-- JDK installed and in your PATH (to run `java`)
-
+- C++17 compatible compiler (Mingw64 v15.1 / MSVC) [Mingw64 v15.1 recomended](https://gcc.gnu.org/gcc-15/).
+- JDK installed and in your PATH (to run `java`).
+- My custom build-script for Windows [Here :D](https://github.com/xabyxd/xabyxd_c++-compilerScript).
 ### 🧾 Server Configuration
 
 Each server must have a `config.json` file in its folder:
@@ -66,16 +67,19 @@ You also need to accept the EULA (`eula.txt`) as you would with a regular Minecr
 From the terminal:
 
 ```bash
-./server_manager list               # List all available servers
-./server_manager status <name>     # Check if the server is running
-./server_manager start <name>      # Start the specified server
-./server_manager stop <name>       # Stop the specified server
+./serverManager -status <name>     # Check if the server is running
+./serverManager -start <name>      # Start the specified server
+./serverManager -stop <name>       # Stop the specified server
+./serverManager -restart <name>    # Restart the specified server after 10 secconds
+./serverManager -version/-v        # Prints the current program version and checks for new versions
+./serverManager -list/-l           # List all available servers
+./serverManager -help/-h           # Prints the help (all the commands)
 ```
 
 Example:
 
 ```bash
-./server_manager start vanilla
+./serverManager start vanilla
 ```
 
 ---
@@ -83,19 +87,21 @@ Example:
 ## 🧪 Usage Example
 
 ```bash
-> ./server_manager -list
-- vanilla
-- forge
+> ./serverManager -list
+- vanillaWithFriends
+- AllTheMods9
 
-> ./server_manager -start vanilla
+> ./serverManager -start vanilla
 🟢 Server 'vanilla' started (PID: 12345)
 
-> ./server_manager -status vanilla
+> ./serverManager -status vanilla
 🟢 Server 'vanilla' is running.
 
-> ./server_manager -stop vanilla
+> ./serverManager -stop vanilla
 🛑 Server 'vanilla' stopped.
 ```
+> PRO TIP: Add the program to the system path to use anywhere in your terminal.<br>
+> example: C:\serverManager\serverManager.exe
 
 ---
 
@@ -117,12 +123,13 @@ Log format:
 
 ## 🔮 Upcoming Features
 
-- ✅ **Linux port**: cross-platform support.
+- 🛠 **Linux port**: cross-platform support.
 - 🔄 **Automatic server downloads**:
   - Vanilla from Mojang's official website.
   - Forge from its installer.
 - ⚙️ **Initial setup automation**:
   - Auto-generation of `config.json`, `eula.txt`, etc.
+  - Templates system.
 - 🌐 **RCON control**:
   - Send commands to servers via RCON.
 - 💻 **Web admin interface**:

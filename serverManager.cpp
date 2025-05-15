@@ -2,7 +2,7 @@
 Author: xabyxd (https://github.com/xabyxd)
 Date: 12-05-2025
 License: Apache 2.0
-Version: 0.4.0
+Version: 0.4.1
 C++ 17 implementation of a server manager for Minecraft servers.
 Compile for windows using mingw-w64 v15.1.0
 */
@@ -14,15 +14,23 @@ Compile for windows using mingw-w64 v15.1.0
 #include <string>
 #include <windows.h>
 #include <tlhelp32.h>
+#include <psapi.h>
+#include <wininet.h>
 #include <fstream>
 #include <sstream>
 #include <ctime>
 #include <nlohmann/json.hpp>
 
+// if u compile this program on Visual Studio 20xx uncomment the "pragma"
+//#pragma comment(lib, "psapi.lib")
+//#pragma comment(lib, "wininet.lib")
+
 namespace filesystem = std::filesystem;
 using json = nlohmann::json;
 
 const bool DEBUG = true;
+const std::string CURRENT_VERSION = "0.4.1";
+const std::string REMOTE_VERSION_URL = "https://pastebin.com/raw/Ps1yZpZc";
 const std::string BASE_DIR = "./InstanceServers/";
 const std::string PID_DIR = BASE_DIR + ".pids/";
 const std::string LOG_FILE = BASE_DIR + ".logs/serverManager.log";
@@ -49,6 +57,63 @@ void debug_log(const std::string& msg) {
 }
 
 // ---------------- PROCESSES ----------------
+
+void print_process_usage(DWORD pid) {
+    HANDLE hProcess = OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, FALSE, pid);
+    if (!hProcess) {
+        std::cerr << "The process to obtain information could not be opened.\n";
+        return;
+    }
+
+    PROCESS_MEMORY_COUNTERS pmc;
+    if (GetProcessMemoryInfo(hProcess, &pmc, sizeof(pmc))) {
+        SIZE_T memMB = pmc.WorkingSetSize / (1024 * 1024);
+        std::cout << "  Used RAM: " << memMB << " MB\n";
+    } else {
+        std::cerr << "Could not get memory usage.\n";
+    }
+
+    FILETIME creationTime, exitTime, kernelTime, userTime;
+    if (GetProcessTimes(hProcess, &creationTime, &exitTime, &kernelTime, &userTime)) {
+        ULONGLONG kernel = ((ULONGLONG)kernelTime.dwHighDateTime << 32) | kernelTime.dwLowDateTime;
+        ULONGLONG user = ((ULONGLONG)userTime.dwHighDateTime << 32) | userTime.dwLowDateTime;
+        ULONGLONG total = (kernel + user) / 10000;
+        std::cout << "  CPU time used: " << total << " ms\n";
+    } else {
+        std::cerr << "Could not get CPU time.\n";
+    }
+
+    CloseHandle(hProcess);
+
+    uintmax_t totalSizeBytes = 0;
+    try {
+        for (const auto& entry : filesystem::recursive_directory_iterator(BASE_DIR)) {
+            if (filesystem::is_regular_file(entry.path())) {
+                totalSizeBytes += filesystem::file_size(entry.path());
+            }
+        }
+
+        double sizeMB = totalSizeBytes / (1024.0 * 1024);
+        double sizeGB = totalSizeBytes / (1024.0 * 1024 * 1024);
+
+        std::cout << "  Server size: " << std::fixed << std::setprecision(2)
+                  << sizeMB << " MB (≈ " << sizeGB << " GB)\n";
+
+    } catch (const filesystem::filesystem_error& e) {
+        std::cerr << "  Could not calculate server size: "
+                  << e.what() << "\n";
+    }
+
+    ULARGE_INTEGER freeBytesAvailable, totalBytes, totalFreeBytes;
+    if (GetDiskFreeSpaceExA(BASE_DIR.c_str(), &freeBytesAvailable, &totalBytes, &totalFreeBytes)) {
+        double totalGB = totalBytes.QuadPart / (1024.0 * 1024 * 1024);
+        double freeGB = totalFreeBytes.QuadPart / (1024.0 * 1024 * 1024);
+        std::cout << "  Disk space: " << std::fixed << std::setprecision(2)
+                  << freeGB << " GB free out of " << totalGB << " GB\n";
+    } else {
+        std::cerr << "  Could not retrieve disk information.\n";
+    }
+}
 
 bool is_process_running(DWORD pid) {
     HANDLE snap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
@@ -108,8 +173,7 @@ bool load_server_config(const std::string& name, json& config) {
 
 // ---------------- FUNCTIONS ----------------
 
-void sleep(unsigned milliseconds)
-    {
+void sleep_server(unsigned milliseconds) {
         Sleep(milliseconds);
     }
 
@@ -127,6 +191,46 @@ void list_servers() {
                 std::cout << "🔴 " << name << " (shutdown)\n";
             }
         }
+    }
+}
+
+void version_checker() {
+    std::cout << "serverManager version " << CURRENT_VERSION << "\n";
+
+    HINTERNET hInternet = InternetOpenA("VersionChecker", INTERNET_OPEN_TYPE_PRECONFIG, NULL, NULL, 0);
+    if (!hInternet) {
+        debug_log("InternetOpenA failed.");
+        return;
+    }
+
+    HINTERNET hConnect = InternetOpenUrlA(hInternet, REMOTE_VERSION_URL.c_str(), NULL, 0, INTERNET_FLAG_RELOAD, 0);
+    if (!hConnect) {
+        debug_log("InternetOpenUrlA failed.");
+        InternetCloseHandle(hInternet);
+        return;
+    }
+
+    char buffer[64];
+    DWORD bytesRead;
+    std::string remoteVersion;
+
+    while (InternetReadFile(hConnect, buffer, sizeof(buffer) - 1, &bytesRead) && bytesRead > 0) {
+        buffer[bytesRead] = '\0';
+        remoteVersion += buffer;
+    }
+
+    InternetCloseHandle(hConnect);
+    InternetCloseHandle(hInternet);
+
+    // Elimina espacios o saltos de línea
+    remoteVersion.erase(remove_if(remoteVersion.begin(), remoteVersion.end(), ::isspace), remoteVersion.end());
+
+    if (!remoteVersion.empty() && remoteVersion != CURRENT_VERSION) {
+        std::cout << "New version available: " << remoteVersion << " Go to: https://github.com/xabyxd/mc-serverManager" <<"\n";
+    } else if (remoteVersion == CURRENT_VERSION) {
+        std::cout << "Up to date!" << "\n";
+    } else {
+        debug_log("No new version available.");
     }
 }
 
@@ -228,7 +332,8 @@ void stop_server(const std::string& name) {
 
 void restart_server(const std::string& name) {
     stop_server(name);
-    sleep(1000);
+        std::cout << "Waiting 10 seconds for the server to stop...\n";
+    sleep_server(10000);
     start_server(name);
     std::cout << "🟢 Server '" + name + "' restarted.\n";
     write_log("Server '" + name + "' restarted.");
@@ -240,7 +345,7 @@ void status_server(const std::string& name) {
     DWORD pid;
     if (pid_in >> pid && is_process_running(pid)) {
         std::cout << "🟢 '" << name << "' is running (PID: " << pid << ")\n";
-        // print_process_usage(pid); NEXT TO IMPLEMENT
+        print_process_usage(pid);
     } else {
         std::cout << "🔴 '" << name << "' is stoped\n";
     }
@@ -251,6 +356,7 @@ void status_server(const std::string& name) {
 void show_help() {
     std::cout << "Usage:\n";
     std::cout << "  serverManager -help -h                Show this help\n";
+    std::cout << "  serverManager -v -version             Prints the current version and indicates if there is a new version.\n";
     std::cout << "  serverManager -list -l                List all servers\n";
     std::cout << "  serverManager -start <name>           Start a server example: serverManager -start server1\n";
     std::cout << "  serverManager -stop <name>            Stop a server example: serverManager -stop server1\n";
@@ -274,21 +380,30 @@ int main(int argc, char* argv[]) {
     if (argc < 2) {
         show_help();
         return 0;
-    }
+    } //NEXT TO IMPLEMENT -> download server version x.x.x from official mojang website and create a server template
 
     std::string command = argv[1];
     if (command == "-list" || command == "-l") {
         list_servers();
-    } else if (command == "-start" && argc == 3) {
+
+    } else if (command == "-start" && (argc == 3)) {
         start_server(argv[2]);
-    } else if (command == "-stop" && argc == 3) {
+
+    } else if (command == "-stop" && (argc == 3)) {
         stop_server(argv[2]);
-    } else if (command == "-status" && argc == 3) {
+
+    } else if (command == "-status" && (argc == 3)) {
         status_server(argv[2]);
-    } else if (command == "-restart" && argc == 3) {
+
+    } else if (command == "-restart" && (argc == 3)) {
         restart_server(argv[2]);
-    } else if (command == "-help" || command == "-h" && argc == 3) {
+
+    } else if ((command == "-help" || command == "-h")) {
         show_help();
+
+    } else if (command == "-version" || command == "-v") {
+        version_checker();
+
     } else {
         show_help();
     }

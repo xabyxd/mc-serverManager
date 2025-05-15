@@ -1,4 +1,4 @@
 {
   "name": "server1",
-  "startCommand": "java -Xms1024M -Xmx1024M -jar minecraft_server.1.5.2.jar nogui"
+  "startCommand": "java -Xms1024M -Xmx1024M -jar server.jar nogui"
 }

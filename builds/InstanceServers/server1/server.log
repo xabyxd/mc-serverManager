@@ -1,89 +1,142 @@
-2025-05-12 16:11:12 [INFO] Starting minecraft server version 1.5.2
-2025-05-12 16:11:12 [INFO] Loading properties
-2025-05-12 16:11:12 [WARNING] server.properties does not exist
-2025-05-12 16:11:12 [INFO] Generating new properties file
-2025-05-12 16:11:12 [INFO] Default game type: SURVIVAL
-2025-05-12 16:11:12 [INFO] Generating keypair
-2025-05-12 16:11:12 [INFO] Starting Minecraft server on *:25565
-2025-05-12 16:11:12 [WARNING] Failed to load operators list: java.io.FileNotFoundException: .\ops.txt (El sistema no puede encontrar el archivo especificado)
-2025-05-12 16:11:12 [WARNING] Failed to load white-list: java.io.FileNotFoundException: .\white-list.txt (El sistema no puede encontrar el archivo especificado)
-2025-05-12 16:11:12 [INFO] Preparing level "world"
-2025-05-12 16:11:12 [INFO] Preparing start region for level 0
-2025-05-12 16:11:13 [INFO] Preparing spawn area: 37%
-2025-05-12 16:11:14 [INFO] Preparing spawn area: 78%
-2025-05-12 16:11:15 [INFO] Done (2,585s)! For help, type "help" or "?"
-2025-05-13 11:24:13 [INFO] Starting minecraft server version 1.5.2
-2025-05-13 11:24:13 [INFO] Loading properties
-2025-05-13 11:24:13 [INFO] Default game type: SURVIVAL
-2025-05-13 11:24:13 [INFO] Generating keypair
-2025-05-13 11:24:13 [INFO] Starting Minecraft server on *:25565
-2025-05-13 11:24:13 [INFO] Preparing level "world"
-2025-05-13 11:24:13 [INFO] Preparing start region for level 0
-2025-05-13 11:24:14 [INFO] Preparing spawn area: 21%
-2025-05-13 11:24:15 [INFO] Preparing spawn area: 57%
-2025-05-13 11:24:16 [INFO] Preparing spawn area: 93%
-2025-05-13 11:24:16 [INFO] Done (3,350s)! For help, type "help" or "?"
-2025-05-13 12:58:02 [INFO] Starting minecraft server version 1.5.2
-2025-05-13 12:58:02 [INFO] Loading properties
-2025-05-13 12:58:02 [INFO] Default game type: SURVIVAL
-2025-05-13 12:58:02 [INFO] Generating keypair
-2025-05-13 12:58:02 [INFO] Starting Minecraft server on *:25565
-2025-05-13 12:58:02 [INFO] Preparing level "world"
-2025-05-13 12:58:02 [INFO] Preparing start region for level 0
-2025-05-13 12:58:02 [INFO] Done (0,253s)! For help, type "help" or "?"
-2025-05-13 13:04:14 [INFO] Starting minecraft server version 1.5.2
-2025-05-13 13:04:14 [INFO] Loading properties
-2025-05-13 13:04:14 [INFO] Default game type: SURVIVAL
-2025-05-13 13:04:14 [INFO] Generating keypair
-2025-05-13 13:04:14 [INFO] Starting Minecraft server on *:25565
-2025-05-13 13:04:14 [INFO] Preparing level "world"
-2025-05-13 13:04:14 [INFO] Preparing start region for level 0
-2025-05-13 13:04:14 [INFO] Done (0,258s)! For help, type "help" or "?"
-2025-05-13 13:58:27 [INFO] Starting minecraft server version 1.5.2
-2025-05-13 13:58:27 [INFO] Loading properties
-2025-05-13 13:58:27 [INFO] Default game type: SURVIVAL
-2025-05-13 13:58:27 [INFO] Generating keypair
-2025-05-13 13:58:28 [INFO] Starting Minecraft server on *:25565
-2025-05-13 13:58:28 [INFO] Preparing level "world"
-2025-05-13 13:58:28 [INFO] Preparing start region for level 0
-2025-05-13 13:58:28 [INFO] Done (0,258s)! For help, type "help" or "?"
-2025-05-13 14:22:07 [INFO] Starting minecraft server version 1.5.2
-2025-05-13 14:22:07 [INFO] Loading properties
-2025-05-13 14:22:07 [INFO] Default game type: SURVIVAL
-2025-05-13 14:22:07 [INFO] Generating keypair
-2025-05-13 14:22:07 [INFO] Starting Minecraft server on *:25565
-2025-05-13 14:22:07 [INFO] Preparing level "world"
-2025-05-13 14:22:07 [INFO] Preparing start region for level 0
-2025-05-13 14:22:08 [INFO] Done (0,262s)! For help, type "help" or "?"
-2025-05-13 14:22:37 [INFO] Starting minecraft server version 1.5.2
-2025-05-13 14:22:37 [INFO] Loading properties
-2025-05-13 14:22:37 [INFO] Default game type: SURVIVAL
-2025-05-13 14:22:37 [INFO] Generating keypair
-2025-05-13 14:22:37 [INFO] Starting Minecraft server on *:25565
-2025-05-13 14:22:37 [INFO] Preparing level "world"
-2025-05-13 14:22:37 [INFO] Preparing start region for level 0
-2025-05-13 14:22:37 [INFO] Done (0,262s)! For help, type "help" or "?"
-2025-05-13 14:38:11 [INFO] Starting minecraft server version 1.5.2
-2025-05-13 14:38:11 [INFO] Loading properties
-2025-05-13 14:38:11 [INFO] Default game type: SURVIVAL
-2025-05-13 14:38:11 [INFO] Generating keypair
-2025-05-13 14:38:11 [INFO] Starting Minecraft server on *:25565
-2025-05-13 14:38:11 [INFO] Preparing level "world"
-2025-05-13 14:38:11 [INFO] Preparing start region for level 0
-2025-05-13 14:38:11 [INFO] Done (0,275s)! For help, type "help" or "?"
-2025-05-13 14:38:39 [INFO] Starting minecraft server version 1.5.2
-2025-05-13 14:38:39 [INFO] Loading properties
-2025-05-13 14:38:39 [INFO] Default game type: SURVIVAL
-2025-05-13 14:38:39 [INFO] Generating keypair
-2025-05-13 14:38:39 [INFO] Starting Minecraft server on *:25565
-2025-05-13 14:38:39 [INFO] Preparing level "world"
-2025-05-13 14:38:39 [INFO] Preparing start region for level 0
-2025-05-13 14:38:39 [INFO] Done (0,259s)! For help, type "help" or "?"
-2025-05-13 14:38:46 [INFO] Starting minecraft server version 1.5.2
-2025-05-13 14:38:46 [INFO] Loading properties
-2025-05-13 14:38:46 [INFO] Default game type: SURVIVAL
-2025-05-13 14:38:46 [INFO] Generating keypair
-2025-05-13 14:38:46 [INFO] Starting Minecraft server on *:25565
-2025-05-13 14:38:46 [INFO] Preparing level "world"
-2025-05-13 14:38:46 [INFO] Preparing start region for level 0
-2025-05-13 14:38:46 [INFO] Done (0,264s)! For help, type "help" or "?"
+2025-05-13 19:48:04 [INFO] Starting minecraft server version 1.5.2
+2025-05-13 19:48:04 [INFO] Loading properties
+2025-05-13 19:48:04 [INFO] Default game type: SURVIVAL
+2025-05-13 19:48:04 [INFO] Generating keypair
+2025-05-13 19:48:04 [INFO] Starting Minecraft server on *:25565
+2025-05-13 19:48:04 [WARNING] **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+2025-05-13 19:48:04 [WARNING] The server will make no attempt to authenticate usernames. Beware.
+2025-05-13 19:48:04 [WARNING] While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+2025-05-13 19:48:04 [WARNING] To change this, set "online-mode" to "true" in the server.properties file.
+2025-05-13 19:48:04 [WARNING] Failed to load operators list: java.io.FileNotFoundException: .\ops.txt (El sistema no puede encontrar el archivo especificado)
+2025-05-13 19:48:04 [WARNING] Failed to load white-list: java.io.FileNotFoundException: .\white-list.txt (El sistema no puede encontrar el archivo especificado)
+2025-05-13 19:48:04 [INFO] Preparing level "world"
+2025-05-13 19:48:04 [INFO] Preparing start region for level 0
+2025-05-13 19:48:05 [INFO] Preparing spawn area: 37%
+2025-05-13 19:48:06 [INFO] Preparing spawn area: 86%
+2025-05-13 19:48:07 [INFO] Done (2,412s)! For help, type "help" or "?"
+2025-05-13 19:48:40 [INFO] Starting minecraft server version 1.5.2
+2025-05-13 19:48:40 [INFO] Loading properties
+2025-05-13 19:48:40 [INFO] Default game type: SURVIVAL
+2025-05-13 19:48:40 [INFO] Generating keypair
+2025-05-13 19:48:40 [INFO] Starting Minecraft server on *:25565
+2025-05-13 19:48:40 [WARNING] **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+2025-05-13 19:48:40 [WARNING] The server will make no attempt to authenticate usernames. Beware.
+2025-05-13 19:48:40 [WARNING] While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+2025-05-13 19:48:40 [WARNING] To change this, set "online-mode" to "true" in the server.properties file.
+2025-05-13 19:48:40 [INFO] Preparing level "world"
+2025-05-13 19:48:40 [INFO] Preparing start region for level 0
+2025-05-13 19:48:41 [INFO] Preparing spawn area: 42%
+2025-05-13 19:48:42 [INFO] Preparing spawn area: 88%
+2025-05-13 19:48:43 [INFO] Done (2,363s)! For help, type "help" or "?"
+2025-05-13 22:19:23 [INFO] Starting minecraft server version 1.5.2
+2025-05-13 22:19:23 [INFO] Loading properties
+2025-05-13 22:19:23 [INFO] Default game type: SURVIVAL
+2025-05-13 22:19:23 [INFO] Generating keypair
+2025-05-13 22:19:23 [INFO] Starting Minecraft server on *:25565
+2025-05-13 22:19:23 [WARNING] **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+2025-05-13 22:19:23 [WARNING] The server will make no attempt to authenticate usernames. Beware.
+2025-05-13 22:19:23 [WARNING] While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+2025-05-13 22:19:23 [WARNING] To change this, set "online-mode" to "true" in the server.properties file.
+2025-05-13 22:19:23 [INFO] Preparing level "world"
+2025-05-13 22:19:24 [INFO] Preparing start region for level 0
+2025-05-13 22:19:24 [INFO] Done (0,296s)! For help, type "help" or "?"
+2025-05-13 22:25:01 [INFO] Starting minecraft server version 1.5.2
+2025-05-13 22:25:01 [INFO] Loading properties
+2025-05-13 22:25:01 [INFO] Default game type: SURVIVAL
+2025-05-13 22:25:01 [INFO] Generating keypair
+2025-05-13 22:25:01 [INFO] Starting Minecraft server on *:25565
+2025-05-13 22:25:01 [WARNING] **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+2025-05-13 22:25:01 [WARNING] The server will make no attempt to authenticate usernames. Beware.
+2025-05-13 22:25:01 [WARNING] While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+2025-05-13 22:25:01 [WARNING] To change this, set "online-mode" to "true" in the server.properties file.
+2025-05-13 22:25:01 [INFO] Preparing level "world"
+2025-05-13 22:25:01 [INFO] Preparing start region for level 0
+2025-05-13 22:25:01 [INFO] Done (0,284s)! For help, type "help" or "?"
+2025-05-13 22:25:41 [INFO] Starting minecraft server version 1.5.2
+2025-05-13 22:25:41 [INFO] Loading properties
+2025-05-13 22:25:41 [INFO] Default game type: SURVIVAL
+2025-05-13 22:25:41 [INFO] Generating keypair
+2025-05-13 22:25:41 [INFO] Starting Minecraft server on *:25565
+2025-05-13 22:25:41 [WARNING] **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+2025-05-13 22:25:41 [WARNING] The server will make no attempt to authenticate usernames. Beware.
+2025-05-13 22:25:41 [WARNING] While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+2025-05-13 22:25:41 [WARNING] To change this, set "online-mode" to "true" in the server.properties file.
+2025-05-13 22:25:41 [INFO] Preparing level "world"
+2025-05-13 22:25:41 [INFO] Preparing start region for level 0
+2025-05-13 22:25:41 [INFO] Done (0,280s)! For help, type "help" or "?"
+2025-05-13 22:29:43 [INFO] Starting minecraft server version 1.5.2
+2025-05-13 22:29:43 [INFO] Loading properties
+2025-05-13 22:29:43 [INFO] Default game type: SURVIVAL
+2025-05-13 22:29:43 [INFO] Generating keypair
+2025-05-13 22:29:43 [INFO] Starting Minecraft server on *:25565
+2025-05-13 22:29:43 [WARNING] **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+2025-05-13 22:29:43 [WARNING] The server will make no attempt to authenticate usernames. Beware.
+2025-05-13 22:29:43 [WARNING] While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+2025-05-13 22:29:43 [WARNING] To change this, set "online-mode" to "true" in the server.properties file.
+2025-05-13 22:29:43 [INFO] Preparing level "world"
+2025-05-13 22:29:44 [INFO] Preparing start region for level 0
+2025-05-13 22:29:44 [INFO] Done (0,318s)! For help, type "help" or "?"
+2025-05-13 22:30:27 [INFO] Starting minecraft server version 1.5.2
+2025-05-13 22:30:27 [INFO] Loading properties
+2025-05-13 22:30:27 [INFO] Default game type: SURVIVAL
+2025-05-13 22:30:27 [INFO] Generating keypair
+2025-05-13 22:30:28 [INFO] Starting Minecraft server on *:25565
+2025-05-13 22:30:28 [WARNING] **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+2025-05-13 22:30:28 [WARNING] The server will make no attempt to authenticate usernames. Beware.
+2025-05-13 22:30:28 [WARNING] While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+2025-05-13 22:30:28 [WARNING] To change this, set "online-mode" to "true" in the server.properties file.
+2025-05-13 22:30:28 [INFO] Preparing level "world"
+2025-05-13 22:30:28 [INFO] Preparing start region for level 0
+2025-05-13 22:30:28 [INFO] Done (0,317s)! For help, type "help" or "?"
+2025-05-13 22:31:59 [INFO] xaby_xd[/127.0.0.1:14864] logged in with entity id 297 at (216.5, 69.0, 242.5)
+2025-05-13 22:54:45 [INFO] Starting minecraft server version 1.5.2
+2025-05-13 22:54:45 [INFO] Loading properties
+2025-05-13 22:54:45 [INFO] Default game type: SURVIVAL
+2025-05-13 22:54:45 [INFO] Generating keypair
+2025-05-13 22:54:46 [INFO] Starting Minecraft server on *:25565
+2025-05-13 22:54:46 [WARNING] **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+2025-05-13 22:54:46 [WARNING] The server will make no attempt to authenticate usernames. Beware.
+2025-05-13 22:54:46 [WARNING] While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+2025-05-13 22:54:46 [WARNING] To change this, set "online-mode" to "true" in the server.properties file.
+2025-05-13 22:54:46 [INFO] Preparing level "world"
+2025-05-13 22:54:46 [INFO] Preparing start region for level 0
+2025-05-13 22:54:46 [INFO] Done (0,282s)! For help, type "help" or "?"
+2025-05-14 11:18:58 [INFO] Starting minecraft server version 1.5.2
+2025-05-14 11:18:58 [INFO] Loading properties
+2025-05-14 11:18:58 [INFO] Default game type: SURVIVAL
+2025-05-14 11:18:58 [INFO] Generating keypair
+2025-05-14 11:18:58 [INFO] Starting Minecraft server on *:25565
+2025-05-14 11:18:58 [WARNING] **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+2025-05-14 11:18:58 [WARNING] The server will make no attempt to authenticate usernames. Beware.
+2025-05-14 11:18:58 [WARNING] While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+2025-05-14 11:18:58 [WARNING] To change this, set "online-mode" to "true" in the server.properties file.
+2025-05-14 11:18:58 [INFO] Preparing level "world"
+2025-05-14 11:18:58 [INFO] Preparing start region for level 0
+2025-05-14 11:18:58 [INFO] Done (0,425s)! For help, type "help" or "?"
+2025-05-14 11:19:08 [INFO] xaby_xd[/127.0.0.1:56127] logged in with entity id 412 at (213.00826926288696, 77.0, 238.34149125575706)
+2025-05-14 11:19:33 [INFO] Starting minecraft server version 1.5.2
+2025-05-14 11:19:33 [INFO] Loading properties
+2025-05-14 11:19:33 [INFO] Default game type: SURVIVAL
+2025-05-14 11:19:33 [INFO] Generating keypair
+2025-05-14 11:19:33 [INFO] Starting Minecraft server on *:25565
+2025-05-14 11:19:33 [WARNING] **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+2025-05-14 11:19:33 [WARNING] The server will make no attempt to authenticate usernames. Beware.
+2025-05-14 11:19:33 [WARNING] While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+2025-05-14 11:19:33 [WARNING] To change this, set "online-mode" to "true" in the server.properties file.
+2025-05-14 11:19:33 [INFO] Preparing level "world"
+2025-05-14 11:19:33 [INFO] Preparing start region for level 0
+2025-05-14 11:19:33 [INFO] Done (0,430s)! For help, type "help" or "?"
+2025-05-14 11:19:39 [INFO] xaby_xd[/127.0.0.1:56142] logged in with entity id 412 at (213.00826926288696, 77.0, 238.34149125575706)
+2025-05-14 11:20:18 [INFO] Starting minecraft server version 1.5.2
+2025-05-14 11:20:18 [INFO] Loading properties
+2025-05-14 11:20:18 [INFO] Default game type: SURVIVAL
+2025-05-14 11:20:18 [INFO] Generating keypair
+2025-05-14 11:20:18 [INFO] Starting Minecraft server on *:25565
+2025-05-14 11:20:18 [WARNING] **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+2025-05-14 11:20:18 [WARNING] The server will make no attempt to authenticate usernames. Beware.
+2025-05-14 11:20:18 [WARNING] While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+2025-05-14 11:20:18 [WARNING] To change this, set "online-mode" to "true" in the server.properties file.
+2025-05-14 11:20:19 [INFO] Preparing level "world"
+2025-05-14 11:20:19 [INFO] Preparing start region for level 0
+2025-05-14 11:20:19 [INFO] Done (0,435s)! For help, type "help" or "?"
+2025-05-14 11:20:25 [INFO] xaby_xd[/127.0.0.1:56161] logged in with entity id 412 at (213.00826926288696, 77.0, 238.34149125575706)

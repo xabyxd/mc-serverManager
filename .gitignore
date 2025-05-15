@@ -1,5 +1,12 @@
+# Files
+
 .env
-.vscode
 buildrun.cmd
-builds/
 NOTES.txt
+
+# Directories
+
+.vscode/
+builds/
+builds/InstanceServers/server1/
+builds/InstanceServers/server1/*
