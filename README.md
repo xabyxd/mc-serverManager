@@ -49,7 +49,7 @@ mc-serverManager/
 - Windows
 - C++17 compatible compiler (Mingw64 v15.1 / MSVC) [Mingw64 v15.1 recomended](https://gcc.gnu.org/gcc-15/).
 - JDK installed and in your PATH (to run `java`).
-- My custom build-script for Windows [Here :D](https://github.com/xabyxd/xabyxd_c++-compilerScript).
+- My custom build-script for Windows [Here :D](https://github.com/xabyxd/xabyxd_cpp-compilerScript).
 ### 🧾 Server Configuration
 
 Each server must have a `config.json` file in its folder:
@@ -91,14 +91,14 @@ Example:
 - vanillaWithFriends
 - AllTheMods9
 
-> ./serverManager -start vanilla
-🟢 Server 'vanilla' started (PID: 12345)
+> ./serverManager -start vanillaWithFriends
+🟢 Server 'vanillaWithFriends' started (PID: 12345)
 
-> ./serverManager -status vanilla
-🟢 Server 'vanilla' is running.
+> ./serverManager -status vanillaWithFriends
+🟢 Server 'vanillaWithFriends' is running.
 
-> ./serverManager -stop vanilla
-🛑 Server 'vanilla' stopped.
+> ./serverManager -stop vanillaWithFriends
+🛑 Server 'vanillaWithFriends' stopped.
 ```
 > PRO TIP: Add the program to the system path to use anywhere in your terminal.<br>
 > example: C:\serverManager\serverManager.exe
@@ -116,7 +116,7 @@ Each server writes its own log in the `logs/` folder, including:
 Log format:
 
 ```
-[ 2025-05-13 | 18:23:04 ] [ start_server ] [ vanilla ] 🟢 Server started (PID: 12345)
+[ 2025-05-13 | 18:23:04 ] [ start_server ] [ vanillaWithFriends ] 🟢 Server started (PID: 12345)
 ```
 
 ---
