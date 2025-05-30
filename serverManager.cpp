@@ -20,6 +20,7 @@ Compile for windows using mingw-w64 v15.1.0
 #include <sstream>
 #include <ctime>
 #include <nlohmann/json.hpp>
+#include <generator/generator.hpp>
 
 // if u compile this program on Visual Studio 20xx uncomment the "pragma"
 //#pragma comment(lib, "psapi.lib")
@@ -34,6 +35,14 @@ const std::string REMOTE_VERSION_URL = "https://pastebin.com/raw/Ps1yZpZc";
 const std::string BASE_DIR = "./InstanceServers/";
 const std::string PID_DIR = BASE_DIR + ".pids/";
 const std::string LOG_FILE = BASE_DIR + ".logs/serverManager.log";
+
+bool load_server_config(const std::string& name, json& config);
+void write_log(const std::string& message);
+void debug_log(const std::string& message);
+bool is_process_running(pid_t pid);
+void list_servers();
+void print_process_usage(pid_t pid);
+void version_checker();
 
 // ---------------- LOGGING ----------------
 

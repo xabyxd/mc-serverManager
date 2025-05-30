@@ -2,6 +2,8 @@
 
 .env
 buildrun.cmd
+buildrun.sh
+serverManager-Linux.cpp
 NOTES.txt
 
 # Directories

@@ -1,0 +1,22 @@
+{
+    "name": "MyProject",
+    "directories": [
+        "src",
+        "include",
+        "docs"
+    ],
+    "files": [
+        {
+            "path": "README.md",
+            "content": "# MyProject\n\nThis is a base file."
+        },
+        {
+            "path": "src/main.cpp",
+            "content": "// main\nint main() { return 0; }"
+        },
+        {
+            "path": "LICENSE",
+            "from_file": "templates/license_apache2.0.txt"
+        }
+    ]
+}
